@@ -35,12 +35,14 @@
 
         handleMoodOptions = () => {
           let randomIndex = Math.floor(Math.random() * this.state.moods.length )
-          this.setState({ currentMood: moods[randomIndex] })
+          // moods was not defined, this.state.moods.....
+          this.setState({ currentMood: this.state.moods[randomIndex] })
         }
 
         render(){
           return(
-
+            // Needed React Fragments, or any kind of element that will case the content
+            <>
               <h1>Welcome to the Mood Meter App</h1>
 
               <h3>Mood Options:</h3>
@@ -48,11 +50,11 @@
               <div style={{ fontSize: "40px", height: "50px"}}>
                 { this.state.currentMood }
               </div>
-
-              <button onClick={ handleMoodOptions }>
+              // handleMoodOptions was not defined, needed this.handleMoodOptions
+              <button onClick={ this.handleMoodOptions }>
                 Click Here For Next Mood option
               </button>
-
+            </>
           )
         }
       }
