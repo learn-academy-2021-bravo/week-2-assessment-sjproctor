@@ -72,21 +72,21 @@ const divisbleBy3 = (number) => {
 
 // a) Create a test with expect statements for each of the variables provided.
 
-describe("caplitalizeFirstLetter", () => {
+describe("capitalizeFirstLetter", () => {
   test("take in an array of words and returns an array with all the words capitalized", () => {
     var randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
     // Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
-    expect(caplitalizeFirstLetter(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+    expect(capitalizeFirstLetter(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
     var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
     // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
-    expect(caplitalizeFirstLetter(randomNouns2)).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
+    expect(capitalizeFirstLetter(randomNouns2)).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
   })
 })
 
 
 // b) Create the function that makes the test pass.
 
-const caplitalizeFirstLetter = (array) => {
+const capitalizeFirstLetter = (array) => {
   return array.map(value => {
     return `${value[0].toUpperCase()}${value.slice(1)}`
   })
@@ -145,4 +145,5 @@ const firstVowel = (string) => {
   // [a, a, e]
   // [a]
   return string.indexOf(vowelsArray[0])
+  "challenge".indexOf('a')
 }
